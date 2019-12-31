@@ -6,32 +6,30 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 })
 export class FirestoreService {
 
-  constructor(
-    private firestore: AngularFirestore
-  ) {}
+  constructor(private firestore: AngularFirestore) {}
 
-  // Crea un nuevo gato
-  public createCat(data: any) {
-    return this.firestore.collection('cats').add(data);
+  // Crea un nuevo Item
+  public createItem(data: any) {
+    return this.firestore.collection('items').add(data);
   }
 
-  // Obtiene un gato
-  public getCat(documentId: string) {
-    return this.firestore.collection('cats').doc(documentId).snapshotChanges();
+  // Obtiene un Item
+  public getItem(documentId: string) {
+    return this.firestore.collection('items').doc(documentId).snapshotChanges();
   }
 
-  // Obtiene todos los gatos
-  public getCats() {
-    return this.firestore.collection('cats').snapshotChanges();
+  // Obtiene todos los Items
+  public getItems() {
+    return this.firestore.collection('items').snapshotChanges();
   }
 
-  // Actualiza un gato
-  public updateCat(documentId: string, data: any) {
-    return this.firestore.collection('cats').doc(documentId).set(data);
+  // Actualiza un Item
+  public updateItem(documentId: string, data: any) {
+    return this.firestore.collection('items').doc(documentId).set(data);
   }
 
-  // Borra un gato
-  public deleteCat(documentId: string) {
-    return this.firestore.collection('cats').doc(documentId).delete();
+  // Borra un Item
+  public deleteItem(documentId: string) {
+    return this.firestore.collection('items').doc(documentId).delete();
   }
 }

@@ -9,14 +9,14 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 import { AppComponent } from './app.component';
-import { CatsComponent } from './components/cats/cats.component';
+import { ItemsComponent } from './components/items/items.component';
 import { FirestoreService } from './services/firestore/firestore.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CatsComponent,
+    ItemsComponent,
     NavbarComponent
   ],
   imports: [
@@ -24,8 +24,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: 'cats', pathMatch: 'full' },
-      { path: 'cats', component: CatsComponent }
+      { path: '', redirectTo: 'items', pathMatch: 'full' },
+      { path: 'items', component: ItemsComponent }
     ]),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFontAwesomeModule
