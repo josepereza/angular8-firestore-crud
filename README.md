@@ -2,7 +2,7 @@
 
 Ejemplo de "CRUD" realizado con Angular y Firebase.
 
-> **UPDATE 10/03/2020:**: Se ha actualizado el repositorio y artículo a Angular 8
+> **UPDATE 10/03/2020:**: Se ha actualizado el repositorio a Angular 8
 
 ![Imagen Principal]<p align="center"><img src="v2.0/captura-1.jpg"> </p>
 
