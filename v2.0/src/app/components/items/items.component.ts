@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FirestoreService } from '../../services/firestore/firestore.service';
-import { Item } from '../../models/item';
+import { FirebaseService } from '../../services/firestore/firebase.service';
 
 @Component({
   selector: 'app-items',
@@ -20,7 +19,7 @@ export class ItemsComponent implements OnInit, OnDestroy {
     id: new FormControl('')
   });
 
-  constructor(private firestoreService: FirestoreService) {}
+  constructor(private _firebase: FirebaseService) {}
 
   ngOnInit() {
     this.newItemForm.setValue({
@@ -29,7 +28,7 @@ export class ItemsComponent implements OnInit, OnDestroy {
       descripcion: '',
       url: ''
     });
-    this.firestoreService.getItems().subscribe((itemsSnapshot) => {
+    this._firebase.getItems().subscribe((itemsSnapshot) => {
       this.items = [];
       itemsSnapshot.forEach((itemData: any) => {
         this.items.push({
@@ -52,7 +51,7 @@ export class ItemsComponent implements OnInit, OnDestroy {
         descripcion: form.descripcion,
         url: form.url
       };
-      this.firestoreService.createItem(data).then(() => {
+      this._firebase.createItem(data).then(() => {
         console.log('Documento creado.');
         this.newItemForm.setValue({
           nombre: '',
@@ -69,7 +68,7 @@ export class ItemsComponent implements OnInit, OnDestroy {
         descripcion: form.descripcion,
         url: form.url
       };
-      this.firestoreService.updateItem(documentId, data).then(() => {
+      this._firebase.updateItem(documentId, data).then(() => {
         this.currentStatus = 1;
         this.newItemForm.setValue({
           nombre: '',
@@ -85,7 +84,7 @@ export class ItemsComponent implements OnInit, OnDestroy {
   }
 
   public editItem(documentId) {
-    const editSubscribe = this.firestoreService.getItem(documentId).subscribe((item) => {
+    const editSubscribe = this._firebase.getItem(documentId).subscribe((item) => {
       this.currentStatus = 2;
       this.documentId = documentId;
       this.newItemForm.setValue({
@@ -99,7 +98,7 @@ export class ItemsComponent implements OnInit, OnDestroy {
   }
 
   public deleteItem(documentId) {
-    this.firestoreService.deleteItem(documentId).then(() => {
+    this._firebase.deleteItem(documentId).then(() => {
       console.log('Documento eliminado.');
     }, (error) => {
       console.error(error);

@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// Acceso al Backend - Firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
-
+// Servicio
+import { FirebaseService } from './services/firestore/firebase.service';
+// Componentes
 import { AppComponent } from './app.component';
 import { ItemsComponent } from './components/items/items.component';
-import { FirestoreService } from './services/firestore/firestore.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
@@ -24,15 +24,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: 'items', pathMatch: 'full' },
-      { path: 'items', component: ItemsComponent }
-    ]),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFontAwesomeModule
+      { path: 'items', component: ItemsComponent },
+      { path: '**', redirectTo: 'items', pathMatch: 'full' }
+    ], {useHash: true}),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     AngularFirestore,
-    FirestoreService
+    FirebaseService
   ],
   bootstrap: [AppComponent]
 })
