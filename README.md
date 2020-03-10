@@ -17,6 +17,6 @@ Imagen Principal Artículo <p align="center"><img src="v2.0/captura-1.jpg"></p>
 2. Configurar atributos del objeto **firestore** en el archivo ```environment.ts```
 
 3. Servir la aplicación
-```ng serve``` // ```ng serve``` 
+```ng serve``` // ```ng serve -o``` 
 
 
