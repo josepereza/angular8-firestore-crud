@@ -4,7 +4,7 @@ Ejemplo de "CRUD" realizado con Angular y Firebase.
 
 > **UPDATE 10/03/2020:**: Se ha actualizado el repositorio y artículo a Angular 8
 
-![Imagen Principal Artículo](http://nicoavila.s3.amazonaws.com/articulos/06_01angular-y-firestore.jpg)
+![Imagen Principal]<p align="center"><img src="v2.0/captura-1.jpg"> </p>
 
 ## Instalación
 
