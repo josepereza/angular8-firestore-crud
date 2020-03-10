@@ -1,5 +1,5 @@
 # angular-firebase
-Ejemplo de CRUD realizada con angular y Firebase
+Ejemplo de "CRUD" realizado con Angular y Firebase.
 
 
 > **UPDATE 10/03/2020:**: Se ha actualizado el repositorio
