@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyD4skUkfyXfeoiApUBX2Anpa4O9SvctQe0',
-    authDomain: 'angularcats-1591d.firebaseapp.com',
-    databaseURL: 'https://angularcats-1591d.firebaseio.com',
-    projectId: 'angularcats-1591d',
-    storageBucket: 'angularcats-1591d.appspot.com',
-    messagingSenderId: '982493706955'
-  }
+    apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    authDomain: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    databaseURL: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    projectId: "xxxxxxxxxxxxx",
+    storageBucket: "xxxxxxxxxxxxxxxxxxxxxxxxx",
+    messagingSenderId: "xxxxxxxxxxxxx",
+  }  
 };
 
 /*
