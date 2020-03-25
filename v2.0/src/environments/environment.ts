@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyAHPOrNPAxnuQuQ7FW36HZFEiEucYR6GRo',
-    authDomain: 'angularitems.firebaseapp.com',
-    databaseURL: 'https://angularitems.firebaseio.com',
-    projectId: 'angularitems',
-    storageBucket: 'angularitems.appspot.com',
-    messagingSenderId: '125182859432'
-  }
+    apiKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    authDomain: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    databaseURL: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    projectId: "xxxxxxxxxxxxx",
+    storageBucket: "xxxxxxxxxxxxxxxxxxxxxxxxx",
+    messagingSenderId: "xxxxxxxxxxxxx",
+  }  
 };
 
 /*
