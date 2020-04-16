@@ -1,6 +1,7 @@
 # angularFirebase
 
 Ejemplo de "CRUD" realizado con Angular y Firebase.
+Solamente funciona la Version 2.0
 
 > **UPDATE 10/03/2020:**: Se ha actualizado el repositorio a Angular 8
 
